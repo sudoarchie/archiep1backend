@@ -6,6 +6,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -32,6 +37,8 @@
     "express": "^4.21.2"
   },
   "lint-staged": {
-  "*.{js,ts,json,md}": ["prettier --write"]
-}
+    "*.{js,ts,json,md}": [
+      "prettier --write"
+    ]
+  }
 }
